@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing:border-box;
+}
+@font-face {
+    font-family: 'Digital-7';
+    src: url(digital-7.ttf);
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #34495e;
+    color: rgba(85, 111, 136, 0.5);
+    user-select: none;
+    cursor: pointer;
+}
+.box{
+    width: 800px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px dotted red;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    background-color: #34495e;
+    color: rgba(85, 111, 136, 0.5);
+}
+.days{
+    width: 800px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    
+}
+.days span{
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.clock{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: rgba(76, 209, 55,1.0);
+    position: relative;
+}
+
+.num,
+.colon{
+    width: 30px;
+    height: 50px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Digital-7';
+}
+.num{
+    position: relative;
+    text-align: right;
+}
+.colon{
+    font-size: 70px;
+    animation: blink 0.7s linear infinite;
+}
+@keyframes blink{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.clock .num::before{
+    content: '0';
+    position: absolute;
+    color: rgba(129, 216, 116,0.1);
+    top: 0;
+    right: 0;
+}
+.meridian{
+    width: 50px;
+    height: 50px;
+}
+.meridian span{
+    display: block;
+    font-size: 50px;
+    font-family: 'Digital-7';
+    font-size: 25px;
+    text-align: center;
+    color: rgba(129, 216, 116,0.3);
+    margin-left: 5px;
+}
+.meridian span:nth-child(2)
+{
+    margin-top: 5px;
+}
+.active{
+    color: rgb(129, 216, 116) !important;
+}
+.date{
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    font-family: 'Digital-7';
+    text-align: center;
+    line-height: 50px;  
+    color: #ff3838;  
+}
+.month{
+    width: 800px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.month span{
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.days-active,
+.month-active{
+    color: #e1b12c;
+}
